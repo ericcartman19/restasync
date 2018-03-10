@@ -7,8 +7,8 @@ import com.bharath.restws.model.CheckList;
 public class CheckProcessorImpl implements CheckProcessor {
 
 	@Override
-	public Boolean processChecks(AsyncResponse response, CheckList checkList) {
-		return true;
+	public void processChecks(AsyncResponse response, CheckList checkList) {
+		response.resume(true);
 	}
 	
 	

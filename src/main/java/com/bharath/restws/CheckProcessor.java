@@ -14,5 +14,5 @@ public interface CheckProcessor {
 	// en una wrapper class
 	@POST
 	@Path("/checks")
-	public Boolean processChecks(@Suspended AsyncResponse response, CheckList checkList); 
+	public void processChecks(@Suspended AsyncResponse response, CheckList checkList); 
 }
