@@ -8,9 +8,12 @@ public class CheckProcessorImpl implements CheckProcessor {
 
 	@Override
 	public void processChecks(AsyncResponse response, CheckList checkList) {
-		response.resume(true);
+		
+		new Thread() {
+			public void run() {
+				response.resume(true);
+			}
+		}.start();
 	}
-	
-	
 
 }
