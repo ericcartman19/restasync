@@ -2,6 +2,8 @@ package com.bharath.restws;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.container.AsyncResponse;
+import javax.ws.rs.container.Suspended;
 
 import com.bharath.restws.model.CheckList;
 
@@ -12,5 +14,5 @@ public interface CheckProcessor {
 	// en una wrapper class
 	@POST
 	@Path("/checks")
-	public Boolean processChecks(CheckList checkList); 
+	public Boolean processChecks(@Suspended AsyncResponse response, CheckList checkList); 
 }
